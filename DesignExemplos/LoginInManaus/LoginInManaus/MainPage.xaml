@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginInManaus.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="Altura">40</x:Double>
+            <!-- Grid do app -->
+            <Style TargetType="Grid" x:Key="PrincipalGrid">
+                <Setter Property="Padding" Value="15, 0" />
+                <Setter Property="BackgroundColor" Value="Aqua" />
+            </Style>
+            <!-- Título do app -->
+            <Style TargetType="Label" x:Key="TituloLabel">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="48" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <!-- Estilo da caixa ao redor da entrada de dados -->
+            <Style TargetType="Frame" x:Key="DesignFrame">
+                <Setter Property="CornerRadius" Value="80" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="HeightRequest" Value="{StaticResource Altura}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <!-- Botão de logar -->
+            <Style TargetType="Button" x:Key="LoginButton">
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="BackgroundColor" Value="#cc1253" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HeightRequest" Value="{StaticResource Altura}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid RowDefinitions="*,Auto,Auto,Auto,Auto,*"
+          ColumnDefinitions="*" Style="{StaticResource PrincipalGrid}">
+        
+        <!-- Título do App -->
+        <Label Text="XAML APP" Style="{StaticResource TituloLabel}"/>
+        <!-- Dados do usuário -->
+        <Frame Grid.Row="1" Style="{StaticResource DesignFrame}">
+            <Entry Placeholder="Usuário" />    
+        </Frame>
+        <!-- Dados da senha -->
+        <Frame Grid.Row="2" Style="{StaticResource DesignFrame}">
+            <Entry Grid.Row="2" Placeholder="Senha" />
+        </Frame>
+        <!-- Efetuar login -->
+        <Button Grid.Row="3" Text="Login" Style="{StaticResource LoginButton}"/>
+        <!-- Opção para registrar a conta -->
+        <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Não possui conta?" TextColor="White" />
+            <Label Text="Registre-se aqui." TextColor="White" />
+        </StackLayout>
+        <!-- Opção entrar usando redes sociais -->
+        <StackLayout Grid.Row="5" HorizontalOptions="Center" VerticalOptions="End">
+            <Label Text="Entre usando uma rede social" TextColor="White" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Facebook" />
+                <Label Text=" Twitter" />
+                <Label Text="Insta" />
+            </StackLayout>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
