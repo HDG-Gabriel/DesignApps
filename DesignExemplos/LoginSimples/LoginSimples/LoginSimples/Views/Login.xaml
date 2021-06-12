@@ -12,6 +12,8 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Padding" Value="0, 17" />
+                <Setter Property="Margin" Value="0, 17, 0, 0" />
             </Style>
             <!-- Estilo para a grid principal -->
             <Style TargetType="Grid"  x:Key="PrincipalGrid">
@@ -21,6 +23,19 @@
             <!-- Entrada de dados do usuário -->
             <Style TargetType="Entry" x:Key="DadosEntry">
                 <Setter Property="PlaceholderColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+            <!-- Estilo para a entrada de usuário -->
+            <Style TargetType="Frame" x:Key="EstiloFrame">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="BorderColor" Value="White" />
+                <Setter Property="CornerRadius" Value="13" />
+                <Setter Property="Margin" Value="0, 6" />
+            </Style>
+            <!-- Estilo botão de login-->
+            <Style TargetType="Button" x:Key="LoginButton">
+                <Setter Property="BackgroundColor" Value="LightSeaGreen" />
+                <Setter Property="TextColor" Value="White" />
             </Style>
             
         </ResourceDictionary>
@@ -35,44 +50,57 @@
             <!-- Texto de login-->
             <Label Text="Login Simples" Style="{StaticResource TituloLabel}"/>
             <!-- Email -->
-            <Frame Grid.Row="1">
+            <Frame Grid.Row="1" Style="{StaticResource EstiloFrame}">
                 <StackLayout Orientation="Horizontal">
-                    <Entry Placeholder="Email" WidthRequest="250"/>
+                    <Image Source="Email.png" HeightRequest="24" WidthRequest="24" />
+                    <Entry Placeholder="Email" Style="{StaticResource DadosEntry}" />
                 </StackLayout>
             </Frame>
             <!-- Senha -->
-            <Frame Grid.Row="2">
+            <Frame Grid.Row="2" Style="{StaticResource EstiloFrame}">
                 <StackLayout Orientation="Horizontal">
-                    <Entry Placeholder="Senha" WidthRequest="250" />
+                    <Image Source="Unlock.png" HeightRequest="24" WidthRequest="24" />
+                    <Entry Placeholder="Senha" Style="{StaticResource DadosEntry}" />
                 </StackLayout>
             </Frame>
             <!-- Opção de lembrar do usuário -->
-            <StackLayout Grid.Row="3" Orientation="Horizontal">
-                <Switch />
-                <Label Text="Lembre-se de mim" />
+            <StackLayout Grid.Row="3" Orientation="Horizontal" Margin="0, 8, 0, 10">
+                <Switch VerticalOptions="Center" />
+                <Label Text="Lembre-se de mim" 
+                       TextColor="White" 
+                       VerticalOptions="Center" />
             </StackLayout>
             <!-- Botão de login -->
-            <Button Grid.Row="4" Text="Login" />
+            <Button Grid.Row="4" Text="Login" Style="{StaticResource LoginButton}" />
             <!--Opções de registrar ou recuperar a senha -->
             <Grid Grid.Row="5" ColumnDefinitions="*,*"
                   RowDefinitions="*">
-                <Button Text="Registrar" />
+                <Button Text="Registrar"  HorizontalOptions="Start" FontSize="10" BackgroundColor="Transparent" TextColor="White" Margin="-10, 0, 0, 0" />
                 <Button Grid.Column="1"
-                        Text="Recuperar" />
+                        Text="Recuperar"  HorizontalOptions="End" FontSize="10" BackgroundColor="Transparent" TextColor="White" />
             </Grid>
             <!-- Separador -->
             <Grid Grid.Row="6"
-                  ColumnDefinitions="*,*,*"
+                  ColumnDefinitions="*,Auto,*"
                   RowDefinitions="*">
-                <BoxView BackgroundColor="Black" />
+                <BoxView BackgroundColor="White" VerticalOptions="Center" HeightRequest="1" />
                 <Label Grid.Column="1" 
-                       Text="ou" />
+                       Text="ou" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Padding="10, 0"
+                       TextColor="White"
+                       Margin="0, 0, 0, 6"/>
                 <BoxView Grid.Column="2" 
-                         BackgroundColor="Black" />
+                         BackgroundColor="White"  VerticalOptions="Center" HeightRequest="1" />
             </Grid>
             <!-- Opção de continuar como desconhecido -->
             <Button Grid.Row="7" 
-                    Text="Continuar como visitante" />
+                    Text="Continuar como visitante"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    TextTransform="None"
+                    FontSize="Small"/>
         </Grid>
         
     </ContentPage.Content>

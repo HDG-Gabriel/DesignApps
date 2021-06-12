@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginSimples.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace LoginSimples
         {
             InitializeComponent();
 
-            MainPage = new Views.Login();
+            MainPage = new Login();
         }
 
         protected override void OnStart()
