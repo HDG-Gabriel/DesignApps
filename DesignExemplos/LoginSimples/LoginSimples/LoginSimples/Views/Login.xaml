@@ -2,11 +2,78 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoginSimples.Views.Login">
+
+    <!-- Estilos definidos por mim -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Texto principal-->
+            <Style TargetType="Label" x:Key="TituloLabel">
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <!-- Estilo para a grid principal -->
+            <Style TargetType="Grid"  x:Key="PrincipalGrid">
+                <Setter Property="BackgroundColor" Value="#34c9eb" />
+                <Setter Property="Padding" Value="20, 0" />
+            </Style>
+            <!-- Entrada de dados do usuário -->
+            <Style TargetType="Entry" x:Key="DadosEntry">
+                <Setter Property="PlaceholderColor" Value="White" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!-- Conteúdo principal -->
+        <Grid Style="{StaticResource PrincipalGrid}"
+              RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, *"
+              ColumnDefinitions="*">
+            
+            <!-- Texto de login-->
+            <Label Text="Login Simples" Style="{StaticResource TituloLabel}"/>
+            <!-- Email -->
+            <Frame Grid.Row="1">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Placeholder="Email" WidthRequest="250"/>
+                </StackLayout>
+            </Frame>
+            <!-- Senha -->
+            <Frame Grid.Row="2">
+                <StackLayout Orientation="Horizontal">
+                    <Entry Placeholder="Senha" WidthRequest="250" />
+                </StackLayout>
+            </Frame>
+            <!-- Opção de lembrar do usuário -->
+            <StackLayout Grid.Row="3" Orientation="Horizontal">
+                <Switch />
+                <Label Text="Lembre-se de mim" />
+            </StackLayout>
+            <!-- Botão de login -->
+            <Button Grid.Row="4" Text="Login" />
+            <!--Opções de registrar ou recuperar a senha -->
+            <Grid Grid.Row="5" ColumnDefinitions="*,*"
+                  RowDefinitions="*">
+                <Button Text="Registrar" />
+                <Button Grid.Column="1"
+                        Text="Recuperar" />
+            </Grid>
+            <!-- Separador -->
+            <Grid Grid.Row="6"
+                  ColumnDefinitions="*,*,*"
+                  RowDefinitions="*">
+                <BoxView BackgroundColor="Black" />
+                <Label Grid.Column="1" 
+                       Text="ou" />
+                <BoxView Grid.Column="2" 
+                         BackgroundColor="Black" />
+            </Grid>
+            <!-- Opção de continuar como desconhecido -->
+            <Button Grid.Row="7" 
+                    Text="Continuar como visitante" />
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>
