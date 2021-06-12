@@ -8,42 +8,75 @@
         <ResourceDictionary>
             <!-- Cor padrão do facebook -->
             <Color x:Key="azulFacebook">#1877f2</Color>
-            <!-- Estilos -->
-            <Style TargetType="Grid" x:Key="PrincipalGrid">
-                <Setter Property="Margin" Value="20, 0" />
+            <!-- ESTILOS -->
+            <!-- Grid secundária estilo -->
+            <Style TargetType="Grid" x:Key="SecundariaGrid">
+                <Setter Property="Padding" Value="20, 0" />
+            </Style>
+            <!-- Botão de login estilo -->
+            <Style TargetType="Button" x:Key="EntrarButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource azulFacebook}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <!-- Esqueceu a senha estilo -->
+            <Style TargetType="Button" x:Key="EsqueceuSenhaButton">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource azulFacebook}" />
+                <Setter Property="FontSize" Value="Caption" />
+            </Style>
+            <!-- Criar conta estilo -->
+            <Style TargetType="Button" x:Key="CriarContaButton">
+                <Setter Property="BackgroundColor" Value="#0eb514" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <!-- Estilo da caixa visuais -->
+            <Style TargetType="BoxView" x:Key="EstiloBoxView">
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="BackgroundColor" Value="Gray" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0, 0, 0, 25" />
+            </Style>
+            <!-- Estilo 'MAIS' opção de linaguagem -->
+            <Style TargetType="Label" x:Key="MaisOpcoesLabel">
+                <Setter Property="TextColor" Value="{StaticResource azulFacebook}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="14" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <Grid ColumnDefinitions="*" RowDefinitions="3*, *, *, *, *, *, *, *"
-              Style="{StaticResource PrincipalGrid}">
+        <Grid ColumnDefinitions="*" RowDefinitions="*, 2*">
             <!-- Fundo azul com a logo -->
             <BoxView BackgroundColor="{StaticResource azulFacebook}" />
             <Image Source="facebook_logo.png" HorizontalOptions="Center" VerticalOptions="Center"
                    HeightRequest="80" WidthRequest="80" />
-            <!-- Opções para mudar o idioma -->
-            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Português" />
-                <Label Text="•  English" />
-                <Label Text="•  Mais..." />
-            </StackLayout>
-            <!-- Informação do email -->
-            <Entry Grid.Row="2" Placeholder="Número de telefone ou email" />
-            <!-- Informação da senha -->
-            <Entry Grid.Row="3" Placeholder="Senha" IsPassword="True" />
-            <!-- Efetuar login -->
-            <Button Grid.Row="4" Text="Entrar" />
-            <!-- Esqueceu a senha -->
-            <Button Grid.Row="5" Text="Esqueceu a senha?" TextTransform="None" />
-            <!-- Seperador bonitinho só pra efeito de design -->
-            <Grid Grid.Row="6" RowDefinitions="*" ColumnDefinitions="*, *, *">
-                <BoxView BackgroundColor="Gray" />
-                <Label Grid.Column="1" Text="OU" />
-                <BoxView Grid.Column="2" BackgroundColor="Gray" />
+            <!-- Grid secundária -->
+            <Grid Grid.Row="1" RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*" Style="{StaticResource SecundariaGrid}">
+                <!-- Opções para mudar o idioma -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Português" />
+                    <Label Text="•  English  •" />
+                    <Label Text="Mais..." Style="{StaticResource MaisOpcoesLabel}"/>
+                </StackLayout>
+                <!-- Informação do email -->
+                <Entry Grid.Row="1" Placeholder="Número de telefone ou email" FontSize="15"/>
+                <!-- Informação da senha -->
+                <Entry Grid.Row="2" Placeholder="Senha" IsPassword="True" FontSize="15"/>
+                <!-- Efetuar login -->
+                <Button Grid.Row="3" Text="Entrar" Style="{StaticResource EntrarButton}"/>
+                <!-- Esqueceu a senha -->
+                <Button Grid.Row="4" Text="Esqueceu a senha?" TextTransform="None" Style="{StaticResource EsqueceuSenhaButton}" />
+                <!-- Seperador bonitinho só pra efeito de design -->
+                <Grid Grid.Row="5" RowDefinitions="*" ColumnDefinitions="*, Auto, *">
+                    <BoxView Style="{StaticResource EstiloBoxView}"/>
+                    <Label Grid.Column="1" Text="OU"
+                           Padding="5, 0"/>
+                    <BoxView Grid.Column="2" Style="{StaticResource EstiloBoxView}" />
+                </Grid>
+                <!-- Criar uma nova conta -->
+                <Button Grid.Row="6" Text="Criar nova conta" Style="{StaticResource CriarContaButton}"/>
             </Grid>
-            <!-- Criar uma nova conta -->
-            <Button Grid.Row="7" Text="Criar nova conta" />
             
         </Grid>
     </ContentPage.Content>
