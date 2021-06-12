@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookLogin.Android", "FacebookLogin.Android\FacebookLogin.Android.csproj", "{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookLogin", "FacebookLogin\FacebookLogin.csproj", "{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FDFB4C2-BF51-4D0D-BB97-BFF59A132062}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F979C6C9-0D5E-4F4F-A943-1DC4D2B2DB3E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA4F6EE4-2759-4613-A8C4-C856BF708E81}
+	EndGlobalSection
+EndGlobal

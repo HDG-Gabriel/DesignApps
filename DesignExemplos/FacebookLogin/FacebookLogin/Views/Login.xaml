@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacebookLogin.Views.Login">
+
+    <!-- Estilos -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Cor padrão do facebook -->
+            <Color x:Key="azulFacebook">#1877f2</Color>
+            <!-- Estilos -->
+            <Style TargetType="Grid" x:Key="PrincipalGrid">
+                <Setter Property="Margin" Value="20, 0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*" RowDefinitions="3*, *, *, *, *, *, *, *"
+              Style="{StaticResource PrincipalGrid}">
+            <!-- Fundo azul com a logo -->
+            <BoxView BackgroundColor="{StaticResource azulFacebook}" />
+            <Image Source="facebook_logo.png" HorizontalOptions="Center" VerticalOptions="Center"
+                   HeightRequest="80" WidthRequest="80" />
+            <!-- Opções para mudar o idioma -->
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Português" />
+                <Label Text="•  English" />
+                <Label Text="•  Mais..." />
+            </StackLayout>
+            <!-- Informação do email -->
+            <Entry Grid.Row="2" Placeholder="Número de telefone ou email" />
+            <!-- Informação da senha -->
+            <Entry Grid.Row="3" Placeholder="Senha" IsPassword="True" />
+            <!-- Efetuar login -->
+            <Button Grid.Row="4" Text="Entrar" />
+            <!-- Esqueceu a senha -->
+            <Button Grid.Row="5" Text="Esqueceu a senha?" TextTransform="None" />
+            <!-- Seperador bonitinho só pra efeito de design -->
+            <Grid Grid.Row="6" RowDefinitions="*" ColumnDefinitions="*, *, *">
+                <BoxView BackgroundColor="Gray" />
+                <Label Grid.Column="1" Text="OU" />
+                <BoxView Grid.Column="2" BackgroundColor="Gray" />
+            </Grid>
+            <!-- Criar uma nova conta -->
+            <Button Grid.Row="7" Text="Criar nova conta" />
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
