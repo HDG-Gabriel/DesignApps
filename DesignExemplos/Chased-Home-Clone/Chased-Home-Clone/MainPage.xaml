@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Chased_Home_Clone.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <!-- Estilos para todos os labels -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout BackgroundColor="#6b03fc">
+        
+        <!-- Cabeçalho -->
+        <StackLayout Orientation="Horizontal"
+                     Margin="15">
+            <StackLayout>
+                <Image Source="close.png"
+                       HeightRequest="24"
+                       HorizontalOptions="Start"/>
+                <Label Text="Crie sua conta"
+                       FontSize="28"
+                       Margin="10, 45, 0, 0"
+                       TextColor="White"
+                       WidthRequest="150"/>    
+            </StackLayout>
+            <Image Source="bgImage1.png"
+                   HeightRequest="140"
+                   HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        
+        <!-- Corpo -->
+        <yummy:PancakeView VerticalOptions="FillAndExpand"
+                           BackgroundColor="White"
+                           CornerRadius="30, 30, 0, 0">
+            <StackLayout Margin="20, 30, 20, 20"
+                         Spacing="10">
+                <!-- Informações do email -->
+                <Label Text="Email"
+                       TextColor="Gray"
+                       Margin="14, 0"
+                       FontSize="16"/>
+                <Frame CornerRadius="10"
+                       Padding="15, 0"
+                       Margin="1, 0">
+                    <Entry />    
+                </Frame>
+                <!-- Informações da senha -->
+                <Label Text="Senha" 
+                       TextColor="Gray"
+                       Margin="14, 0"
+                       FontSize="16"/>
+                <Frame CornerRadius="10"
+                       Padding="15, 0"
+                       Margin="1, 0">
+                    <Entry IsPassword="True"/>    
+                </Frame>
+                <!-- Esqueceu a senha -->
+                <Label Text="Esqueceu a senha?" 
+                       HorizontalOptions="End"
+                       TextColor="Gray"
+                       Margin="5, 0"/>
+                <!-- Logar na conta-->
+                <Button Text="Login"
+                        BackgroundColor="#6b03fc"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        CornerRadius="25"
+                        WidthRequest="120"
+                        TextTransform="None"
+                        FontSize="18"
+                        FontAttributes="Bold"/>
+                <Label Text="Ou"
+                       TextColor="Gray"
+                       Margin="0, 10"
+                       HorizontalOptions="Center"/>
+                <!-- Redes sociais opções -->
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="10">
+                    <Frame BackgroundColor="Orange"
+                           CornerRadius="40">
+                        <Image Source="google" Aspect="AspectFit" WidthRequest="32" HeightRequest="32"/>
+                    </Frame>
+                    <Frame BackgroundColor="Blue"
+                           CornerRadius="40">
+                        <Image Source="facebook" Aspect="AspectFit" WidthRequest="32" HeightRequest="32"/>
+                    </Frame>
+                    <Frame BackgroundColor="Aqua"
+                           CornerRadius="40">
+                        <Image Source="twitter" Aspect="AspectFit" WidthRequest="32" HeightRequest="32" />
+                    </Frame>
+                </StackLayout>
+                <!-- Opção para criar conta -->
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <Label Text="Não tem uma conta?"
+                           Margin="0, 2, 0, 0"/>
+                    <Label Text="Crie uma"
+                           TextColor="#6b03fc"
+                           FontSize="16"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </yummy:PancakeView>
+
+    </StackLayout>
+
+</ContentPage>

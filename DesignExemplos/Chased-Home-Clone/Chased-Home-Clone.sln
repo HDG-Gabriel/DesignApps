@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chased-Home-Clone.Android", "Chased-Home-Clone.Android\Chased-Home-Clone.Android.csproj", "{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chased-Home-Clone", "Chased-Home-Clone\Chased-Home-Clone.csproj", "{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6574A1CD-5ED4-4641-B577-A7F841D8E4D2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E4D782-FADA-4584-ACAF-E1A6B7AA66D1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC410A9-2A78-4074-A8FF-EFB9B0667DAC}
+	EndGlobalSection
+EndGlobal
