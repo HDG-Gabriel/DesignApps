@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChasedHomeClone.Views.Dashboard"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             BackgroundColor="{StaticResource TemaRoxo}"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <!-- Estilo label dos cards -->
+            <Style TargetType="Label" x:Key="LegendaLabel">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+            
+            <!-- Estilo do Frame das informações -->
+            <Style TargetType="Frame" x:Key="InfoFrame">
+                <Setter Property="Padding" Value="8" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            
+            <!-- Estilo do label 'Como Iniciar' -->
+            <Style TargetType="Label" x:Key="IniciarLabel">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource TemaRoxo}" />
+                <Setter Property="Margin" Value="0, 10" />
+            </Style>
+            
+            <!-- Estilo do label principal -->
+            <Style TargetType="Label" x:Key="PrincipalLabel">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="WidthRequest" Value="120" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <!-- Cabeçalho de informações -->
+            <StackLayout Orientation="Horizontal"
+                         Margin="20, 20, 0, 20">
+                <StackLayout>
+                    <Image Source="hamburgerMenu" 
+                           HeightRequest="30" 
+                           WidthRequest="30" 
+                           HorizontalOptions="Start"/>
+                    <Label Text="Comece seu dia confortavelmente"
+                           Style="{StaticResource PrincipalLabel}"/>
+                </StackLayout>
+                <Image Source="bgImage" 
+                       HeightRequest="160" 
+                       WidthRequest="160"
+                       HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            
+            <!-- Corpo -->
+            <yummy:PancakeView
+                CornerRadius="30, 30, 0, 0"
+                BackgroundColor="White">
+
+                <StackLayout>
+                    <!-- Informação de como usar -->
+                    <Label Text="Como iniciar?"
+                           Style="{StaticResource IniciarLabel}"/>
+
+                    <!-- Box de informação -->
+                    <Grid RowDefinitions="*, *"
+                          ColumnDefinitions="*, *"
+                          HorizontalOptions="FillAndExpand"
+                          RowSpacing="10"
+                          ColumnSpacing="10"
+                          Padding="15, 0, 15, 10">
+
+                        <!--Linha 0-->
+                        <Frame Style="{StaticResource InfoFrame}">
+                            <StackLayout>
+                                <Image Source="im1" />
+                                <Label Text="Crie sua conta"
+                                       Style="{StaticResource LegendaLabel}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame Grid.Column="1"
+                               Style="{StaticResource InfoFrame}">
+                            <StackLayout>
+                                <Image Source="im2" />
+                                <Label Text="Planeje suas viagens" 
+                                       Style="{StaticResource LegendaLabel}" />
+                            </StackLayout>
+                        </Frame>
+                        
+                        <!-- Linha 1 -->
+                        <Frame Grid.Row="1"
+                               Style="{StaticResource InfoFrame}">
+                            <StackLayout>
+                                <Image Source="im3" />
+                                <Label Text="Faça seu carro"
+                                       Style="{StaticResource LegendaLabel}" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame Grid.Row="1"
+                               Grid.Column="1"
+                               Style="{StaticResource InfoFrame}">
+                            <StackLayout>
+                                <Image Source="im4" />
+                                <Label Text="Aproveite sua viagem" 
+                                       Style="{StaticResource LegendaLabel}" />
+                            </StackLayout>
+                        </Frame>
+
+                    </Grid>
+                    
+                </StackLayout>
+
+            </yummy:PancakeView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
