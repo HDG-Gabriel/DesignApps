@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Covid19App.Views"
+            x:Class="Covid19App.Views.MainPage"
+            SelectedTabColor="{StaticResource BarItemSelectedColor}"
+            UnselectedTabColor="{StaticResource BarItemUnselectedColor}"
+            BarBackgroundColor="White">
+
+    <!-- Pages -->
+    <local:HomePage Title="Home">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{StaticResource IconHome}" 
+                             FontFamily="FontAwesomeSolid"/>
+        </ContentPage.IconImageSource>
+    </local:HomePage>
+
+    <local:CasesPage Title="Cases">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{StaticResource IconWorld}" 
+                             FontFamily="FontAwesomeSolid" />
+        </ContentPage.IconImageSource>
+    </local:CasesPage>
+
+    <local:StatisticsPage Title="Statistics">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{StaticResource IconStatistics}"
+                             FontFamily="FontAwesomeSolid"/>
+        </ContentPage.IconImageSource>
+    </local:StatisticsPage>
+
+    <local:SettingsPage Title="Settings">
+        <ContentPage.IconImageSource>
+            <FontImageSource Glyph="{StaticResource IconSettings}"
+                             FontFamily="FontAwesomeSolid" />
+        </ContentPage.IconImageSource>
+    </local:SettingsPage>
+
+</TabbedPage>
