@@ -6,27 +6,27 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            
-            <!-- Style label of page -->
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="Black" />
-            </Style>
-            
             <!-- Style Frame -->
             <Style TargetType="Frame" x:Key="AboutFrame">
                 <Setter Property="CornerRadius" Value="10" />
             </Style>
             
-            <!-- Style label inside frame -->
+            <!-- Style main label inside frame -->
             <Style TargetType="Label" x:Key="TitleLabel">
-                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontSize" Value="24" />
                 <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            
+            <!-- Style label secondary inside frame -->
+            <Style TargetType="Label" x:Key="BodyFrameLabel">
+                <Setter Property="FontSize" Value="17" />
                 <Setter Property="TextColor" Value="Black" />
             </Style>
             
             <!-- Style main label -->
             <Style TargetType="Label" x:Key="MainLabel">
-                <Setter Property="FontSize" Value="23" />
+                <Setter Property="FontSize" Value="30" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="Margin" Value="0, 30, 0, 15" />
                 <Setter Property="TextColor" Value="Black" />
@@ -35,18 +35,22 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout Padding="12">
+    <StackLayout Padding="15">
         <Label Text="COVID-19"
                Style="{StaticResource MainLabel}"/>
         
         <ScrollView>
-            <StackLayout>
+            
+            <StackLayout Spacing="15">
+                
                 <Frame Style="{StaticResource AboutFrame}">
                     <StackLayout>
                         <Label Text="About"
                                Style="{StaticResource TitleLabel}" />
-                        <Label Text="Coronavirus disease (COVID-19) is an infectious disease caused by a new virus." />
-                        <Label Text="The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing." />
+                        <Label Text="Coronavirus disease (COVID-19) is an infectious disease caused by a new virus." 
+                               Style="{StaticResource BodyFrameLabel}" />
+                        <Label Text="The disease causes respiratory illness (like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing."
+                               Style="{StaticResource BodyFrameLabel}"/>
                     </StackLayout>
                 </Frame>
 
@@ -54,8 +58,10 @@
                     <StackLayout>
                         <Label Text="How it spreds"
                                Style="{StaticResource TitleLabel}" />
-                        <Label Text="Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze." />
-                        <Label Text="It also spreads when a person touches a surface or object that has the virus on it, then touches their eyes, nose, or mouth." />
+                        <Label Text="Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze."
+                               Style="{StaticResource BodyFrameLabel}"/>
+                        <Label Text="It also spreads when a person touches a surface or object that has the virus on it, then touches their eyes, nose, or mouth." 
+                               Style="{StaticResource BodyFrameLabel}"/>
                     </StackLayout>
                 </Frame>
 
@@ -63,8 +69,10 @@
                     <StackLayout>
                         <Label Text="Symptoms"
                                Style="{StaticResource TitleLabel}" />
-                        <Label Text="People may be sick with the virus for 1 to 14 days before developing symptoms. The most common symptoms of coronavirus disease (COVID-19) are fever, tiredness, and dry cough." />
-                        <Label Text="More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions (such as asthma, diabetes, or heart disease), may be more vulnerable to becoming severely ill." />
+                        <Label Text="People may be sick with the virus for 1 to 14 days before developing symptoms. The most common symptoms of coronavirus disease (COVID-19) are fever, tiredness, and dry cough."
+                               Style="{StaticResource BodyFrameLabel}"/>
+                        <Label Text="More rarely, the disease can be serious and even fatal. Older people, and people with other medical conditions (such as asthma, diabetes, or heart disease), may be more vulnerable to becoming severely ill."
+                               Style="{StaticResource BodyFrameLabel}"/>
                     </StackLayout>
                 </Frame>
 
