@@ -1,10 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19App.Views.StatisticsPage">
+             x:Class="Covid19App.Views.StatisticsPage"
+             BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <!-- Style main label -->
+            <Style TargetType="Label" x:Key="MainLabel">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="Margin" Value="10, 30, 0, 10" />
+            </Style>
+            
+            <!-- Style label of information -->
+            <Style TargetType="Label" x:Key="InfoLabel">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <!-- Size label about numbers-->
+            <x:Double x:Key="FontSizeLabel">18</x:Double>
+            <x:Double x:Key="IconSize">18</x:Double>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
     <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" />
+        
+        <Label Text="World Wide Statistics"
+               Style="{StaticResource MainLabel}"/>
+
+        <Frame BackgroundColor="White"
+               HasShadow="True"
+               Margin="15, 0"
+               Padding="10"
+               CornerRadius="10">
+
+            <StackLayout Padding="10"
+                         Spacing="10">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{StaticResource IconPen}" 
+                           TextColor="{StaticResource CasesColor}"
+                           FontSize="{StaticResource IconSize}"
+                           FontFamily="FontAwesomeSolid" />
+                    <Label Text="Confirmed Cases" 
+                           Style="{StaticResource InfoLabel}"/>
+                    <Label Text="336127" 
+                           FontSize="{StaticResource FontSizeLabel}"
+                           TextColor="{StaticResource CasesColor}" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{StaticResource IconPlus}" 
+                           TextColor="{StaticResource RecoveredColor}"
+                           FontSize="{StaticResource IconSize}"
+                           FontFamily="FontAwesomeSolid" />
+                    <Label Text="Total Recovered" 
+                           Style="{StaticResource InfoLabel}" />
+                    <Label Text="148,598" 
+                           FontSize="{StaticResource FontSizeLabel}" 
+                           TextColor="{StaticResource RecoveredColor}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{StaticResource IconTimer}"
+                           TextColor="{StaticResource BarItemSelectedColor}"
+                           FontSize="{StaticResource IconSize}"
+                           FontFamily="FontAwesomeSolid"/>
+                    <Label Text="Total deaths" 
+                           Style="{StaticResource InfoLabel}"/>
+                    <Label Text="22,644"
+                           FontSize="{StaticResource FontSizeLabel}"
+                           TextColor="{StaticResource BarItemSelectedColor}"/>
+                </StackLayout>
+
+            </StackLayout>
+        </Frame>
+
+        <Label Text="Last update 07:45 PM"
+               HorizontalTextAlignment="Center"
+               TextColor="{StaticResource BarItemSelectedColor}"
+               FontAttributes="Italic"
+               FontSize="Caption"/>
     </StackLayout>
-    
+
 </ContentPage>
