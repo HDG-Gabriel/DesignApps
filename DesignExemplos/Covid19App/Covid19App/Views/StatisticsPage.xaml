@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Covid19App.Views.StatisticsPage"
-             BackgroundColor="{StaticResource BackgroundColor}">
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Statistics">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -16,8 +17,8 @@
             
             <!-- Style label of information -->
             <Style TargetType="Label" x:Key="InfoLabel">
-                <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="Black" />
             </Style>
 
             <!-- Size label about numbers-->

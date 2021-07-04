@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Covid19App.Views.CasesPage">
+             x:Class="Covid19App.Views.CasesPage"
+             Title="Worldwide Cases"
+             BackgroundColor="White">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -15,6 +17,7 @@
             <!-- Style about information label-->
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="Black" />
             </Style>
 
         </ResourceDictionary>
@@ -25,7 +28,8 @@
         <ListView ItemsSource="{Binding Cases}"
                   Margin="15, 0, 0, 0"
                   HasUnevenRows="True"
-                  SelectionMode="None">
+                  SelectionMode="None"
+                  SeparatorColor="Gray">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

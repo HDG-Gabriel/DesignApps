@@ -11,8 +11,6 @@ namespace Covid19App.Views
     {
         public ObservableCollection<CovidCase> Cases { get; }
 
-        public ObservableCollection<Person> People { get; }
-
         public CasesPage()
         {
             InitializeComponent();
